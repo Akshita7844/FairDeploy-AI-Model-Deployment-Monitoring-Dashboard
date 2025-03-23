@@ -12,3 +12,4 @@ Check out the interactive AI monitoring dashboard built with Streamlit:
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
+Deployment pipeline activated 🚀
