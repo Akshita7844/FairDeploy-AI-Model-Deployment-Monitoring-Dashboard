@@ -1,0 +1,165 @@
+/* ===== Global Dark Mode ===== */
+body, .stApp {
+    background-color: #0f1117;
+    font-family: 'Segoe UI', sans-serif;
+    color: #f0f0f0;
+}
+
+/* ===== Neon Header ===== */
+.title {
+    text-align: center;
+    padding: 30px 10px;
+    background-color: #12151e;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    font-size: 2.5em;
+    font-weight: bold;
+    background: linear-gradient(to right, #00ffe7, #00bcd4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 10px rgba(0, 255, 231, 0.3);
+}
+
+/* ===== Text Fix ===== */
+h1, h2, h3, h4, p, li, div {
+    color: #f0f0f0;
+}
+
+/* ===== KPI Cards ===== */
+.kpi-card {
+    background: #1f2937;
+    border-left: 4px solid #00ffe7;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.1);
+    transition: transform 0.2s ease-in-out;
+    width: 100%;
+}
+.kpi-card h4 {
+    margin-bottom: 8px;
+    font-size: 1.1em;
+    color: #bbdefb;
+}
+.kpi-card p {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #00ffe7;
+}
+.kpi-card:hover {
+    transform: scale(1.03);
+}
+
+/* ===== Risk Alerts ===== */
+.risk-low {
+    background: #1b3c2a;
+    border-left: 6px solid #00c853;
+    padding: 12px;
+    border-radius: 10px;
+    color: #b9f6ca;
+}
+.risk-medium {
+    background: #3c2f1b;
+    border-left: 6px solid #f9ab00;
+    padding: 12px;
+    border-radius: 10px;
+    color: #ffe57f;
+}
+.risk-high {
+    background: #3c1b1b;
+    border-left: 6px solid #ff1744;
+    padding: 12px;
+    border-radius: 10px;
+    color: #ff8a80;
+    animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 23, 68, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(255, 23, 68, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 23, 68, 0); }
+}
+
+/* ===== Insight Box ===== */
+.insight-box {
+    background: #1e1e30;
+    border-left: 6px solid #00ffe7;
+    padding: 15px;
+    border-radius: 10px;
+    color: #bbdefb;
+    margin-top: 10px;
+}
+
+/* ===== Orange Buttons ===== */
+button[kind="secondary"], .stButton > button, .stDownloadButton > button {
+    background: #ff7043 !important;
+    color: white !important;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 10px 20px;
+    border: none;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+button:hover {
+    background: #ff5722 !important;
+}
+
+/* ===== Footer ===== */
+.footer {
+    font-size: 0.85em;
+    color: #888;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* ===== Highlighted SHAP Expander ===== */
+.stExpander {
+    background-color: #1f2937 !important;
+    border: 1px solid #00ffe7 !important;
+    border-radius: 10px !important;
+    color: #ffffff !important;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(0, 255, 231, 0.1);
+    margin-top: 15px;
+}
+
+.stExpanderHeader {
+    font-size: 16px;
+    background: linear-gradient(to right, #00ffe7, #00bcd4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 6px rgba(0, 255, 231, 0.4);
+}
+
+/* 🌙 Sidebar Dark Mode */
+[data-testid="stSidebar"] {
+    background-color: #111827 !important; /* dark gray */
+    color: #ffffff;
+}
+
+/* Sidebar Titles & Labels */
+[data-testid="stSidebar"] h1, 
+[data-testid="stSidebar"] h2, 
+[data-testid="stSidebar"] h3, 
+[data-testid="stSidebar"] label {
+    color: #38bdf8 !important; /* Neon blue */
+}
+
+/* File Uploader Text */
+.css-1cpxqw2 {
+    color: #ffffff !important; /* White text inside uploader */
+}
+
+/* Sidebar Uploaded File Info */
+[data-testid="stFileUploaderDropzone"] {
+    border: 1px solid #38bdf8; /* Neon border */
+    background-color: #1f2937; /* Slightly lighter dark */
+}
+
+/* Sidebar Success/Info Messages */
+.stAlert {
+    background-color: #1f2937 !important;
+    border-left: 4px solid #38bdf8 !important;
+    color: #d1d5db !important;
+}

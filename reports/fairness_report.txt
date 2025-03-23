@@ -1,0 +1,7 @@
+📈 Fairness Report
+Latest SPD: 0.150
+⚠️ Bias Alert: SPD exceeds threshold (0.1)
+
+--- AIF360 Metrics ---
+Statistical Parity Difference (SPD): 0.035
+Disparate Impact (DI): 1.057
