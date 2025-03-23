@@ -81,11 +81,16 @@ y_true = df['label']
 
 # --- Predict Safely ---
 try:
+    # Patch model at runtime for Streamlit Cloud
+    if not hasattr(model, 'monotonic_cst'):
+        model.monotonic_cst = None  # Safe dummy attribute to avoid error
+
     y_pred = model.predict(X)
     y_prob = model.predict_proba(X)[:, 1]
 except Exception as e:
     st.error(f"⚠️ Prediction Error: {e}")
     st.stop()
+
 
 # --- Metrics Calculation ---
 acc = accuracy_score(y_true, y_pred)
