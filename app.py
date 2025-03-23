@@ -44,7 +44,7 @@ try:
         st.sidebar.success(f"✅ Loaded: {os.path.basename(selected_model_path)}")
     else:
         model = joblib.load('models/partner_model.pkl')
-         🛠️ Patch Fix: Add dummy monotonic_cst attribute if missing (for compatibility)
+         #Patch Fix: Add dummy monotonic_cst attribute if missing (for compatibility)
         if not hasattr(model, 'monotonic_cst'):
             model.monotonic_cst = None  # Or use [] if your code expects a list
         st.sidebar.info("Using sample model.")
