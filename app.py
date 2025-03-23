@@ -9,7 +9,7 @@ from aif360.datasets import BinaryLabelDataset
 import os
 
 # --- Page Setup ---
-st.set_page_config(page_title="Executive AI Insights Dashboard", layout="wide")
+st.set_page_config(page_title=" FairDeploy: AI Model Deployment & Monitoring Dashboard", layout="wide")
 
 # Load Dark Mode CSS
 with open("style.css") as f:
