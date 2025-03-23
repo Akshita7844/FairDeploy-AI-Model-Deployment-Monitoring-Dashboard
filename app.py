@@ -37,23 +37,26 @@ if uploaded_models:
         model_paths.append(path)
 
 # Model Version Selection
-# --- Load Model (with Patch Fix) ---
+# --- Load Model (with Safe Patch) ---
+def patch_monotonic(model_obj):
+    if not hasattr(model_obj, 'monotonic_cst'):
+        setattr(model_obj, 'monotonic_cst', None)
+    return model_obj
+
 try:
     if model_paths:
         selected_model_path = st.sidebar.selectbox("Select Model Version", model_paths)
         model = joblib.load(selected_model_path)
+        model = patch_monotonic(model)  # Apply patch
         st.sidebar.success(f"✅ Loaded: {os.path.basename(selected_model_path)}")
     else:
         model = joblib.load('models/partner_model.pkl')
+        model = patch_monotonic(model)  # Apply patch
         st.sidebar.info("Using sample model.")
 
-    # 🛠️ Patch: Add dummy monotonic_cst attribute if missing
-    if not hasattr(model, 'monotonic_cst'):
-        model.monotonic_cst = None  # Or []
 except Exception as e:
     st.sidebar.error(f"❌ Model load error: {e}")
     st.stop()
-
 
 # --- Load Data ---
 try:
