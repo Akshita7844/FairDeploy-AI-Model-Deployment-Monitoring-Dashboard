@@ -37,7 +37,6 @@ if uploaded_models:
         model_paths.append(path)
 
 # Model Version Selection
-# --- Model Version Selection ---
 try:
     if model_paths:
         selected_model_path = st.sidebar.selectbox("Select Model Version", model_paths)
@@ -47,12 +46,13 @@ try:
         model = joblib.load('models/partner_model.pkl')
         st.sidebar.info("Using sample model.")
 
-    # 🛠️ Patch Fix: Add dummy monotonic_cst attribute if missing
+    # 🛠️ Patch: Add dummy monotonic_cst attribute if missing
     if not hasattr(model, 'monotonic_cst'):
-        model.monotonic_cst = None  # Patch for compatibility
+        model.monotonic_cst = None  # Or use []
 except Exception as e:
     st.sidebar.error(f"❌ Model load error: {e}")
     st.stop()
+
 
 
 # --- Load Data ---
