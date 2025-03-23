@@ -37,6 +37,7 @@ if uploaded_models:
         model_paths.append(path)
 
 # Model Version Selection
+# --- Load Model (with Patch Fix) ---
 try:
     if model_paths:
         selected_model_path = st.sidebar.selectbox("Select Model Version", model_paths)
@@ -48,7 +49,7 @@ try:
 
     # 🛠️ Patch: Add dummy monotonic_cst attribute if missing
     if not hasattr(model, 'monotonic_cst'):
-        model.monotonic_cst = None  # Or use []
+        model.monotonic_cst = None  # Or []
 except Exception as e:
     st.sidebar.error(f"❌ Model load error: {e}")
     st.stop()
