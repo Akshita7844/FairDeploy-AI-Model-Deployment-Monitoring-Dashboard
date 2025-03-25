@@ -6,3 +6,4 @@ scikit-learn==1.3.2
 matplotlib==3.6.3
 shap==0.41.0
 plotly==5.15.0
+numpy==1.23.5
