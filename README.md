@@ -4,21 +4,25 @@
 
 ---
 
+# 🚀 Live Demo
+👉 [Launch FairDeploy on Streamlit Cloud](https://fairdeploy.streamlit.app)
+
+---
+
 ## 📊 Key Features
 
-| Feature                 | Description                                                                 |
-|------------------------|-----------------------------------------------------------------------------|
-| **Model & Data Upload** | Upload custom AI models (.pkl) and datasets (.csv) or use sample assets     |
-| **Performance Metrics** | Real-time Accuracy, F1 Score, ROC-AUC with drift alerts                     |
-| **Fairness Analysis**   | Weekly bias trend (SPD), cost impact calculator, mitigation simulator       |
-| **Forecasting**         | Predict future bias impact and costs for risk planning                      |
-| **Explainability**      | SHAP-based case-level interpretability with interactive force plots         |
-| **Executive Summary**   | Downloadable report summarizing KPIs, bias impact, and recommendations      |
-| **Model Versioning**    | Switch between models with version dropdown                                 |
-| **AI Observability**    | Logs every prediction with audit logs viewer                                |
-| **ONNX Export**         | Export models for edge/cloud AI with one click                              |
-| **CI/CD Deployment**    | Auto-deploy pipeline using GitHub Actions and Docker                        |
-| **Cloud Upload (Optional)** | Push model and logs to cloud storage (simulated)                         |
+| Feature                 | Description                                                                       |
+|-------------------------|------------------------------------------------------------------------------------|
+| **Model & Data Upload** | Upload custom AI models (.pkl) and datasets (.csv) or use sample assets           |
+| **Performance Metrics** | Real-time Accuracy, F1 Score, ROC-AUC with drift alerts                           |
+| **Fairness Analysis**   | Weekly bias trend (SPD), cost impact calculator, mitigation simulator             |
+| **Forecasting**         | Predict future bias impact and costs for risk planning                            |
+| **Explainability**      | SHAP-based case-level interpretability with interactive force plots (via scripts) |
+| **Executive Summary**   | Downloadable report summarizing KPIs, bias impact, and recommendations            |                      
+| **AI Observability**    | Logs every prediction with audit logs viewer (via scripts)                        |
+| **ONNX Export**         | Export models for edge/cloud AI with one click (via scripts)                      |
+| **CI/CD Deployment**    | Auto-deploy pipeline using GitHub Actions and Docker (depoly.yml)                 |
+| **Cloud Upload (Optional)** | Push model and logs to cloud storage (simulated)                              |
 
 ---
 
@@ -69,8 +73,6 @@ pip install -r requirements.txt
 ```bash
 streamlit run app.py
 ```
-
-Open in browser: [http://localhost:8501](http://localhost:8501)
 
 ---
 
