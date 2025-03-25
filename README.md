@@ -26,6 +26,14 @@
 
 ---
 
+## ❓ Why FairDeploy?
+
+✅ Most AI dashboards stop at metrics.  
+✅ FairDeploy goes further: bias, transparency, cost impact, and cloud-readiness.  
+✅ Designed for real-world leadership use cases, not just experimentation.
+
+---
+
 ## 🧑‍💻 Project Structure
 
 ```
